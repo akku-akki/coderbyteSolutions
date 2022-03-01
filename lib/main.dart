@@ -1,4 +1,1 @@
-import 'reverse_string.dart';
-
-void main() {
-}
+void main() {}
