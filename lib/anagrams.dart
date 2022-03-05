@@ -1,32 +1,42 @@
-bool isAnagram(String a, String b) {
-  final hashA = getHashFromString(a.toLowerCase());
-  final hashB = getHashFromString(b.toLowerCase());
-
-  if (hashA.keys.length != hashB.keys.length) {
-    return false;
-  }
-
-  for (final keys in hashA.keys) {
-    if (hashA[keys] != hashB[keys]) {
-      return false;
-    }
-  }
-
-  return true;
+bool isAnagram(String str1, String str2) {
+  String normalize(String str) => (str
+          .toLowerCase()
+          .replaceAll(RegExp(r'[^a-z0-9]', caseSensitive: false), '')
+          .split('')
+        ..sort())
+      .join('');
+  return normalize(str1) == normalize(str2);
 }
 
-Map<String, int> getHashFromString(String str) {
-  final Map<String, int> charHash = {};
-  final resultStr = str.replaceAll(RegExp(r'[^a-z0-9]'), '');
-  resultStr.split('').forEach((element) {
-    if (charHash.containsKey(element)) {
-      charHash[element] = charHash[element]! + 1;
-    } else {
-      charHash.addAll({element: 1});
-    }
-  });
-  return charHash;
-}
+// bool isAnagram(String a, String b) {
+//   final hashA = getHashFromString(a.toLowerCase());
+//   final hashB = getHashFromString(b.toLowerCase());
+
+//   if (hashA.keys.length != hashB.keys.length) {
+//     return false;
+//   }
+
+//   for (final keys in hashA.keys) {
+//     if (hashA[keys] != hashB[keys]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// Map<String, int> getHashFromString(String str) {
+//   final Map<String, int> charHash = {};
+//   final resultStr = str.replaceAll(RegExp(r'[^a-z0-9]'), '');
+//   resultStr.split('').forEach((element) {
+//     if (charHash.containsKey(element)) {
+//       charHash[element] = charHash[element]! + 1;
+//     } else {
+//       charHash.addAll({element: 1});
+//     }
+//   });
+//   return charHash;
+// }
 
 void main() {
   print(isAnagram('rail safety', 'fairy tales'));
