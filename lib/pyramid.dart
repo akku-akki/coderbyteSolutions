@@ -13,9 +13,10 @@
 */
 
 void main() {
-  printPyramid(6);
+  printPyramidRecursive(6);
 }
 
+/// SOLUTION 1
 void printPyramid(int n) {
   int row = n;
   int col = (2 * n) - 1;
@@ -32,4 +33,24 @@ void printPyramid(int n) {
     }
     print(level);
   }
+}
+
+/// SOL 2
+void printPyramidRecursive(int n, {int row = 0, String level = ''}) {
+  if (n == row) {
+    return;
+  }
+  if (level.length == 2 * n - 1) {
+    print(level);
+    return printPyramidRecursive(n, row: row + 1);
+  }
+
+  int mid = n - 1;
+  late String add;
+  if (mid - row <= level.length && mid + row >= level.length) {
+    add = '#';
+  } else {
+    add = ' ';
+  }
+  printPyramidRecursive(n, row: row, level: level + add);
 }
