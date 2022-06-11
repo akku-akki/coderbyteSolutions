@@ -24,4 +24,12 @@ int fib(int n) {
   return result.last;
 }
 
+/// Solution 2  Recursive
+int recursiveFib(int n) {
+  if (n < 2) {
+    return n;
+  }
+  return recursiveFib(n - 1) + recursiveFib(n - 2);
+}
 
+ 
