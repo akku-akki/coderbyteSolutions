@@ -32,4 +32,20 @@ int recursiveFib(int n) {
   return recursiveFib(n - 1) + recursiveFib(n - 2);
 }
 
- 
+// Solution 3 Memoization
+
+int fibMemo(int n, {Map<int, int>? cache}) {
+  if (n < 2) {
+    return n;
+  }
+  if (cache == null) {
+    cache = <int, int>{};
+  }
+  if (cache.containsKey(n)) {
+    return cache[n]!;
+  } else {
+    int result = fibMemo(n - 1, cache: cache) + fibMemo(n - 2, cache: cache);
+    cache[n] = result;
+    return result;
+  }
+}
