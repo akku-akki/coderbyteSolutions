@@ -1,5 +1,5 @@
 void main() {
-  print(sumOfNumbers(00));
+  print(sumOfNumbers(5));
 }
 
 int sumOfNumbers(int n) {
