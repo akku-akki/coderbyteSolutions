@@ -1,8 +1,8 @@
 void main() {
-  final array = [1, 6, -3, 7, 2, 4, -5, 0];
+  final array = [1, 6, -3, 7, 2, 4];
   print(bubbleSortRecursion(
     array,
-    row: array.length,
+    row: array.length - 1,
   ));
 }
 
@@ -11,7 +11,7 @@ List<int> bubbleSortRecursion(List<int> array,
   if (row <= 0) {
     return array;
   }
-  if (column < row - 1) {
+  if (column < row) {
     if (array[column] > array[column + 1]) {
       int temp = array[column];
       array[column] = array[column + 1];

@@ -1,9 +1,6 @@
-import 'matrix.dart';
+import 'recurssion_array_k/selection_sort.dart';
 
 void main() {
-  // print(matrix(3));
-  // print(fib(4));
-  // print(recursiveFib(50));
-  print(DateTime.now());
-  print(DateTime.now());
+  final array = [5, 4];
+  print(selectionSort(array, array.length - 1));
 }
