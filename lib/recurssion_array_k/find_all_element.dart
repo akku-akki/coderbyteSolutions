@@ -1,5 +1,5 @@
 void main() {
-  print(findAllElementPresent([1, 0, 3, 0, 5, 0, 7, 0], target: 2));
+  print(findAllElementPresent([1, 0, 3, 0, 5, 0, 7, 0], target: 0));
 }
 
 List<int> findAllElementPresent(List<int> array,
@@ -14,8 +14,6 @@ List<int> findAllElementPresent(List<int> array,
     result.add(index);
   }
 
-  final entries = findAllElementPresent(array,
+  return findAllElementPresent(array,
       target: target, index: index + 1, result: result);
-
-  return result;
 }
