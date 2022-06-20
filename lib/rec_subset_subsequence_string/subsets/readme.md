@@ -5,6 +5,8 @@ Subset=>
 
   sets and permutation are different
 
+  permutation is in how many different ways can arrange
+
  * recurssion and iteration
 
  problem have 2 steps
@@ -17,3 +19,8 @@ Subset=>
 
  subsset => array
  subSequence => string
+
+ * when you find a duplicate element only add it in the newly created subset
+ of previous step
+
+ * because of above points duplicates have to be together soln => Sort the array
