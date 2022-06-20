@@ -2,6 +2,7 @@ void main() {
   print(skip('baccab'));
   print(skip2('casadafavagg'));
   print(skipApple('zxcvapplemmnn'));
+  print(skipAppNotApple('  bfeubgcmro -> app <- jfh gih ->apple -<jm goier'));
 }
 
 String skip(String processed, {String ans = ''}) {
@@ -39,5 +40,16 @@ String skipApple(String fruit) {
     return skipApple(fruit.substring(5));
   } else {
     return fruit[0] + skipApple(fruit.substring(1));
+  }
+}
+
+String skipAppNotApple(String fruit) {
+  if (fruit == '') {
+    return '';
+  }
+  if (fruit.startsWith('app') && !fruit.startsWith('apple')) {
+    return skipAppNotApple(fruit.substring(3));
+  } else {
+    return fruit[0] + skipAppNotApple(fruit.substring(1));
   }
 }
