@@ -2,6 +2,9 @@
  * 1. divide array into 2 Parts.
  * 2. get both parts soeted via recurssion.
  * 3. merge the sorted parts
+ * 
+ * NOTE = At every level n element are been merged
+ * n log n
  */
 
 void main() {
