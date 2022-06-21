@@ -6,6 +6,7 @@ Subset=>
   sets and permutation are different
 
   permutation is in how many different ways can arrange
+  permutation is [size]Factorial;
 
  * recurssion and iteration
 
