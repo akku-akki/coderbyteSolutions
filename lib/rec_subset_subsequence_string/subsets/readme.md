@@ -25,3 +25,7 @@ Subset=>
  of previous step
 
  * because of above points duplicates have to be together soln => Sort the array
+
+
+ if form is taking something and ignoring something
+ its recurrence of type processed and unprocessed (combination)
