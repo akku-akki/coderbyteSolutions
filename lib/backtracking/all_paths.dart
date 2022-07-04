@@ -7,7 +7,7 @@ void main() {
     [true, true, true],
   ];
 
-  allPaths('', maze, 0, 0);
+  // allPaths('', maze, 0, 0);
 }
 
 void allPaths(String p, List<List<bool>> maze, int r, int c) {
