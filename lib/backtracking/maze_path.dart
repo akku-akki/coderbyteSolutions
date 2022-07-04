@@ -49,15 +49,15 @@ List<String> diagonalPaths(String p, int r, int c) {
   List<String> list = [];
 
   if (r > 1 && c > 1) {
-    list.addAll(diagonalPaths(p + 'x', r - 1, c - 1));
+    list.addAll(diagonalPaths(p + 'D', r - 1, c - 1));
   }
 
   if (r > 1) {
-    list.addAll(diagonalPaths(p + 'D', r - 1, c));
+    list.addAll(diagonalPaths(p + 'V', r - 1, c));
   }
 
   if (c > 1) {
-    list.addAll(diagonalPaths(p + 'R', r, c - 1));
+    list.addAll(diagonalPaths(p + 'H', r, c - 1));
   }
 
   return list;
