@@ -26,7 +26,7 @@
 // 1 <= target <= 1000
 
 void main() {
-  print(calculateDiceRoll(4, 6, 4));
+  print(calculateDiceRoll(2, 6, 4));
 }
 
 int calculateDiceRoll(
