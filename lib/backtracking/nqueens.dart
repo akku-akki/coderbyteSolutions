@@ -8,9 +8,12 @@ void main() {
     [" _ ", " _ ", " _ ", " _ "],
     [" _ ", " _ ", " _ ", " _ "],
   ];
-  List<List<String>> board = List.filled(n, List.filled(n, " _ "));
+  List<List<String>> board = List.generate(
+    n,
+    (index) => List.generate(n, (index) => ' _ '),
+  );
   print(list);
-  print(queens(list, 0));
+  print(queens(board, 0));
 }
 
 int queens(List<List<String>> board, int row) {
